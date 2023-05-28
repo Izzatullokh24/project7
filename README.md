@@ -1,47 +1,34 @@
-# project7
-# Here is source code for project 7
+# project 7
+# Here is a source code for project 7
 
 ```
-ubuntu2005@ubuntu:~$ git clone https://github.com/online-courses-materials/sms-project7.git
+ubuntu2005@ubuntu:~/catkin_ws$ git clone https://github.com/online-courses-materials/sms-project7.git
 Cloning into 'sms-project7'...
 remote: Enumerating objects: 24, done.
 remote: Counting objects: 100% (24/24), done.
 remote: Compressing objects: 100% (21/21), done.
 remote: Total 24 (delta 4), reused 12 (delta 0), pack-reused 0
-Unpacking objects: 100% (24/24), 10.93 KiB | 1.56 MiB/s, done.
-ubuntu2005@ubuntu:~$ ls
-assigment3_ws   assignment4_ws         midterm      project2_ws   SMS-WS
-assignment_1    catkin_ws              midterm_ws   project4_ws   Templates
-assignment2     Desktop                Music        project6_ws   Videos
-assignment2_ws  Documents              Pictures     Public        week3
-assignment3_ws  Downloads              project2     sms-project3  week3.sh
-assignment4     install_ros_noetic.sh  project2+ws  sms-project7  week3.sh.save
-ubuntu2005@ubuntu:~$ cd sms-project7/
-ubuntu2005@ubuntu:~/sms-project7$ ls
+Unpacking objects: 100% (24/24), 10.93 KiB | 861.00 KiB/s, done.
+ubuntu2005@ubuntu:~/catkin_ws$ ls
+assignment_1  build  devel  mid-term  midterm  project2_ws  project3_ws  SMS_MS  sms-project3  sms-project7  src  week4
+ubuntu2005@ubuntu:~/catkin_ws$ cd sms-project7/
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ ls
 README.md  src
-ubuntu2005@ubuntu:~/sms-project7$ mkdir srx
-ubuntu2005@ubuntu:~/sms-project7$ mkdir src
-mkdir: cannot create directory ‘src’: File exists
-ubuntu2005@ubuntu:~/sms-project7$ catkin_create_pkg project7 roscpp
-Created file project7/package.xml
-Created file project7/CMakeLists.txt
-Created folder project7/include/project7
-Created folder project7/src
-Successfully created files in /home/ubuntu2005/sms-project7/project7. Please adjust the values in package.xml.
-ubuntu2005@ubuntu:~/sms-project7$ cd ..
-ubuntu2005@ubuntu:~$ ls
-assigment3_ws  assignment2_ws  assignment4_ws  Documents              midterm     Pictures     project2_ws  Public        SMS-WS     week3
-assignment_1   assignment3_ws  catkin_ws       Downloads              midterm_ws  project2     project4_ws  sms-project3  Templates  week3.sh
-assignment2    assignment4     Desktop         install_ros_noetic.sh  Music       project2+ws  project6_ws  sms-project7  Videos     week3.sh.save
-ubuntu2005@ubuntu:~$ cd sms-project7/
-ubuntu2005@ubuntu:~/sms-project7$ catkin_make
-Base path: /home/ubuntu2005/sms-project7
-Source space: /home/ubuntu2005/sms-project7/src
-Build space: /home/ubuntu2005/sms-project7/build
-Devel space: /home/ubuntu2005/sms-project7/devel
-Install space: /home/ubuntu2005/sms-project7/install
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ cd src
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7/src$ catkin_create_pkg project7 roscpp
+usage: catkin_create_pkg [-h] [--meta] [-s [SYS_DEPS [SYS_DEPS ...]]] [-b [BOOST_COMPS [BOOST_COMPS ...]]] [-V PKG_VERSION] [-D DESCRIPTION] [-l LICENSE] [-a AUTHOR] [-m MAINTAINER]
+                         [--rosdistro ROSDISTRO]
+                         name [dependencies [dependencies ...]]
+catkin_create_pkg: error: File exists: /home/ubuntu2005/catkin_ws/sms-project7/src/project7/package.xml
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7/src$ cd ..
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ catkin_make
+Base path: /home/ubuntu2005/catkin_ws/sms-project7
+Source space: /home/ubuntu2005/catkin_ws/sms-project7/src
+Build space: /home/ubuntu2005/catkin_ws/sms-project7/build
+Devel space: /home/ubuntu2005/catkin_ws/sms-project7/devel
+Install space: /home/ubuntu2005/catkin_ws/sms-project7/install
 ####
-#### Running command: "cmake /home/ubuntu2005/sms-project7/src -DCATKIN_DEVEL_PREFIX=/home/ubuntu2005/sms-project7/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu2005/sms-project7/install -G Unix Makefiles" in "/home/ubuntu2005/sms-project7/build"
+#### Running command: "cmake /home/ubuntu2005/catkin_ws/sms-project7/src -DCATKIN_DEVEL_PREFIX=/home/ubuntu2005/catkin_ws/sms-project7/devel -DCMAKE_INSTALL_PREFIX=/home/ubuntu2005/catkin_ws/sms-project7/install -G Unix Makefiles" in "/home/ubuntu2005/catkin_ws/sms-project7/build"
 ####
 -- The C compiler identification is GNU 9.4.0
 -- The CXX compiler identification is GNU 9.4.0
@@ -57,7 +44,7 @@ Install space: /home/ubuntu2005/sms-project7/install
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Using CATKIN_DEVEL_PREFIX: /home/ubuntu2005/sms-project7/devel
+-- Using CATKIN_DEVEL_PREFIX: /home/ubuntu2005/catkin_ws/sms-project7/devel
 -- Using CMAKE_PREFIX_PATH: /opt/ros/noetic
 -- This workspace overlays: /opt/ros/noetic
 -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
@@ -67,7 +54,7 @@ Install space: /home/ubuntu2005/sms-project7/install
 -- Using empy: /usr/lib/python3/dist-packages/em.py
 -- Using CATKIN_ENABLE_TESTING: ON
 -- Call enable_testing()
--- Using CATKIN_TEST_RESULTS_DIR: /home/ubuntu2005/sms-project7/build/test_results
+-- Using CATKIN_TEST_RESULTS_DIR: /home/ubuntu2005/catkin_ws/sms-project7/build/test_results
 -- Forcing gtest/gmock from source, though one was otherwise available.
 -- Found gtest sources under '/usr/src/googletest': gtests will be built
 -- Found gmock sources under '/usr/src/googletest': gmock will be built
@@ -84,62 +71,62 @@ Install space: /home/ubuntu2005/sms-project7/install
 -- +++ processing catkin package: 'project7'
 -- ==> add_subdirectory(project7)
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
--- Generating .msg files for action project7/Navigate2D /home/ubuntu2005/sms-project7/src/project7/action/Navigate2D.action
+-- Generating .msg files for action project7/Navigate2D /home/ubuntu2005/catkin_ws/sms-project7/src/project7/action/Navigate2D.action
 Generating for action Navigate2D
 -- project7: 7 messages, 0 services
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/ubuntu2005/sms-project7/build
+-- Build files have been written to: /home/ubuntu2005/catkin_ws/sms-project7/build
 ####
-#### Running command: "make -j2 -l2" in "/home/ubuntu2005/sms-project7/build"
+#### Running command: "make -j2 -l2" in "/home/ubuntu2005/catkin_ws/sms-project7/build"
 ####
 Scanning dependencies of target sensor_msgs_generate_messages_cpp
 Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DActionGoal
 [  0%] Built target sensor_msgs_generate_messages_cpp
 Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DFeedback
 [  0%] Built target _project7_generate_messages_check_deps_Navigate2DActionGoal
-Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DAction
 [  0%] Built target _project7_generate_messages_check_deps_Navigate2DFeedback
+Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DAction
 Scanning dependencies of target actionlib_msgs_generate_messages_cpp
-[  0%] Built target _project7_generate_messages_check_deps_Navigate2DAction
 [  0%] Built target actionlib_msgs_generate_messages_cpp
 Scanning dependencies of target std_msgs_generate_messages_cpp
-Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DResult
 [  0%] Built target std_msgs_generate_messages_cpp
+Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DResult
+[  0%] Built target _project7_generate_messages_check_deps_Navigate2DAction
 Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DGoal
 [  0%] Built target _project7_generate_messages_check_deps_Navigate2DResult
-[  0%] Built target _project7_generate_messages_check_deps_Navigate2DGoal
 Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DActionResult
+[  0%] Built target _project7_generate_messages_check_deps_Navigate2DGoal
 Scanning dependencies of target _project7_generate_messages_check_deps_Navigate2DActionFeedback
 [  0%] Built target _project7_generate_messages_check_deps_Navigate2DActionResult
 Scanning dependencies of target sensor_msgs_generate_messages_eus
-[  0%] Built target _project7_generate_messages_check_deps_Navigate2DActionFeedback
 [  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target _project7_generate_messages_check_deps_Navigate2DActionFeedback
 Scanning dependencies of target std_msgs_generate_messages_eus
 Scanning dependencies of target actionlib_msgs_generate_messages_eus
 [  0%] Built target std_msgs_generate_messages_eus
-Scanning dependencies of target sensor_msgs_generate_messages_lisp
 [  0%] Built target actionlib_msgs_generate_messages_eus
+Scanning dependencies of target sensor_msgs_generate_messages_lisp
 Scanning dependencies of target std_msgs_generate_messages_lisp
 [  0%] Built target sensor_msgs_generate_messages_lisp
-[  0%] Built target std_msgs_generate_messages_lisp
-Scanning dependencies of target sensor_msgs_generate_messages_nodejs
 Scanning dependencies of target actionlib_msgs_generate_messages_lisp
-[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
 [  0%] Built target actionlib_msgs_generate_messages_lisp
-Scanning dependencies of target actionlib_msgs_generate_messages_nodejs
+Scanning dependencies of target sensor_msgs_generate_messages_nodejs
+[  0%] Built target sensor_msgs_generate_messages_nodejs
 Scanning dependencies of target std_msgs_generate_messages_nodejs
+Scanning dependencies of target actionlib_msgs_generate_messages_nodejs
 [  0%] Built target std_msgs_generate_messages_nodejs
 [  0%] Built target actionlib_msgs_generate_messages_nodejs
 Scanning dependencies of target std_msgs_generate_messages_py
 Scanning dependencies of target sensor_msgs_generate_messages_py
-[  0%] Built target std_msgs_generate_messages_py
 [  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
 Scanning dependencies of target actionlib_msgs_generate_messages_py
 Scanning dependencies of target project7_generate_messages_cpp
 [  0%] Built target actionlib_msgs_generate_messages_py
-Scanning dependencies of target project7_generate_messages_eus
 [  2%] Generating C++ code from project7/Navigate2DAction.msg
+Scanning dependencies of target project7_generate_messages_eus
 [  4%] Generating EusLisp code from project7/Navigate2DAction.msg
 [  7%] Generating EusLisp code from project7/Navigate2DActionGoal.msg
 [  9%] Generating C++ code from project7/Navigate2DActionGoal.msg
@@ -150,10 +137,10 @@ Scanning dependencies of target project7_generate_messages_eus
 [ 21%] Generating EusLisp code from project7/Navigate2DGoal.msg
 [ 24%] Generating C++ code from project7/Navigate2DGoal.msg
 [ 26%] Generating EusLisp code from project7/Navigate2DResult.msg
-[ 29%] Generating C++ code from project7/Navigate2DResult.msg
-[ 31%] Generating EusLisp code from project7/Navigate2DFeedback.msg
-[ 34%] Generating C++ code from project7/Navigate2DFeedback.msg
-[ 36%] Generating EusLisp manifest code for project7
+[ 29%] Generating EusLisp code from project7/Navigate2DFeedback.msg
+[ 31%] Generating C++ code from project7/Navigate2DResult.msg
+[ 34%] Generating EusLisp manifest code for project7
+[ 36%] Generating C++ code from project7/Navigate2DFeedback.msg
 [ 36%] Built target project7_generate_messages_cpp
 Scanning dependencies of target project7_generate_messages_lisp
 [ 39%] Generating Lisp code from project7/Navigate2DAction.msg
@@ -161,20 +148,20 @@ Scanning dependencies of target project7_generate_messages_lisp
 [ 43%] Generating Lisp code from project7/Navigate2DActionResult.msg
 [ 46%] Generating Lisp code from project7/Navigate2DActionFeedback.msg
 [ 48%] Generating Lisp code from project7/Navigate2DGoal.msg
-[ 51%] Generating Lisp code from project7/Navigate2DResult.msg
-[ 53%] Generating Lisp code from project7/Navigate2DFeedback.msg
-[ 53%] Built target project7_generate_messages_lisp
+[ 48%] Built target project7_generate_messages_eus
 Scanning dependencies of target project7_generate_messages_nodejs
-[ 53%] Built target project7_generate_messages_eus
-[ 56%] Generating Javascript code from project7/Navigate2DAction.msg
+[ 51%] Generating Javascript code from project7/Navigate2DAction.msg
+[ 53%] Generating Lisp code from project7/Navigate2DResult.msg
+[ 56%] Generating Javascript code from project7/Navigate2DActionGoal.msg
+[ 58%] Generating Lisp code from project7/Navigate2DFeedback.msg
+[ 60%] Generating Javascript code from project7/Navigate2DActionResult.msg
+[ 60%] Built target project7_generate_messages_lisp
 Scanning dependencies of target project7_generate_messages_py
-[ 58%] Generating Python from MSG project7/Navigate2DAction
-[ 60%] Generating Javascript code from project7/Navigate2DActionGoal.msg
-[ 63%] Generating Javascript code from project7/Navigate2DActionResult.msg
+[ 63%] Generating Python from MSG project7/Navigate2DAction
 [ 65%] Generating Javascript code from project7/Navigate2DActionFeedback.msg
 [ 68%] Generating Javascript code from project7/Navigate2DGoal.msg
-[ 70%] Generating Python from MSG project7/Navigate2DActionGoal
-[ 73%] Generating Javascript code from project7/Navigate2DResult.msg
+[ 70%] Generating Javascript code from project7/Navigate2DResult.msg
+[ 73%] Generating Python from MSG project7/Navigate2DActionGoal
 [ 75%] Generating Javascript code from project7/Navigate2DFeedback.msg
 [ 75%] Built target project7_generate_messages_nodejs
 Scanning dependencies of target action_client
@@ -188,14 +175,14 @@ Scanning dependencies of target action_client
 [ 92%] Built target project7_generate_messages_py
 Scanning dependencies of target action_server
 [ 95%] Building CXX object project7/CMakeFiles/action_server.dir/src/action_server.cpp.o
-[ 97%] Linking CXX executable /home/ubuntu2005/sms-project7/devel/lib/project7/action_client
-[100%] Linking CXX executable /home/ubuntu2005/sms-project7/devel/lib/project7/action_server
-[100%] Built target action_client
+[ 97%] Linking CXX executable /home/ubuntu2005/catkin_ws/sms-project7/devel/lib/project7/action_client
+[ 97%] Built target action_client
 Scanning dependencies of target project7_generate_messages
-[100%] Built target project7_generate_messages
+[ 97%] Built target project7_generate_messages
+[100%] Linking CXX executable /home/ubuntu2005/catkin_ws/sms-project7/devel/lib/project7/action_server
 [100%] Built target action_server
-ubuntu2005@ubuntu:~/sms-project7$ source devel/setup.bash
-ubuntu2005@ubuntu:~/sms-project7$ rosmsg list
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ source devel/setup.bash
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$  rosmsg list
 actionlib/TestAction
 actionlib/TestActionFeedback
 actionlib/TestActionGoal
@@ -469,13 +456,13 @@ visualization_msgs/InteractiveMarkerUpdate
 visualization_msgs/Marker
 visualization_msgs/MarkerArray
 visualization_msgs/MenuEntry
-ubuntu2005@ubuntu:~/sms-project7$ rosmsg show project7/Navigate2DGoal
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rosmsg show project7/Navigate2DGoal
 geometry_msgs/Point point
   float64 x
   float64 y
   float64 z
 
-ubuntu2005@ubuntu:~/sms-project7$ rosmsg show project7/Navigate2DAction
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rosmsg show project7/Navigate2DAction
 project7/Navigate2DActionGoal action_goal
   std_msgs/Header header
     uint32 seq
@@ -536,6 +523,5 @@ project7/Navigate2DActionFeedback action_feedback
   project7/Navigate2DFeedback feedback
     float32 distance_to_point
 
-ubuntu2005@ubuntu:~/sms-project7$
-
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ 
 ```
