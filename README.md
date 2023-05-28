@@ -525,3 +525,87 @@ project7/Navigate2DActionFeedback action_feedback
 
 ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ 
 ```
+
+# Roscore restarting
+```
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ roscore
+... logging to /home/ubuntu2005/.ros/log/048eac1a-fd50-11ed-8577-a178a7ecd0de/roslaunch-ubuntu-7408.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+started roslaunch server http://ubuntu:37119/
+ros_comm version 1.16.0
+
+
+SUMMARY
+========
+
+PARAMETERS
+ * /rosdistro: noetic
+ * /rosversion: 1.16.0
+
+NODES
+
+auto-starting new master
+process[master]: started with pid [7416]
+ROS_MASTER_URI=http://ubuntu:11311/
+
+setting /run_id to 048eac1a-fd50-11ed-8577-a178a7ecd0de
+process[rosout-1]: started with pid [7426]
+started core service [/rosout]
+```
+
+# here 
+```
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rostopic list
+/rosout
+/rosout_agg
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ source devel/setup.sh
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rosrun project7 action_server
+[ INFO] [1685275696.816935009]: Goal Received
+
+```
+
+
+# here 
+
+```
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rostopic list
+/navigate_2d/cancel
+/navigate_2d/feedback
+/navigate_2d/goal
+/navigate_2d/result
+/navigate_2d/status
+/robot_position
+/rosout
+/rosout_agg
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ 
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ 
+
+
+```
+# here 
+```
+
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ source devel/setup.sh 
+ubuntu2005@ubuntu:~/catkin_ws/sms-project7$ rosrun project7 action_client
+
+Enter the X-Coordinate: 2
+
+Enter the Y-Coordinate: 3
+
+Goal Activated
+Distance to Goal: 3.60555
+Distance to Goal: 3.60555
+Distance to Goal: 3.60555
+Distance to Goal: 3.60555
+Distance to Goal: 3.60555
+
+
+
+
+```
+
+
+
